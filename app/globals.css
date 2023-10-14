@@ -16,16 +16,25 @@
   }
 }
 
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
 
 .menu ul::before{
   width: 0;
+}
+
+.menu :where(li ul) {
+  margin-left: 0 !important;
+}
+/* 
+.menu :where(li > details > summary):after, .menu :where(li > .menu-dropdown-toggle):after {
+  transform: rotate(-43deg) !important;
+  /* transform-origin: 128% 75%; 
+}
+.menu :where(li > details[open] > summary):after, .menu :where(li > .menu-dropdown-toggle.menu-dropdown-show):after {
+  transform: rotate(225deg); 
+  /* transform-origin: 75% 75%; */
+/* } */
+.menu :where(li > details > summary):after, .menu :where(li > .menu-dropdown-toggle):after {
+  height: 0.4rem;
+  width: 0.4rem;
+  box-shadow: 1px 1px;
 }
