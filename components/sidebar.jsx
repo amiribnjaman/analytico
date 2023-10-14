@@ -3,8 +3,8 @@ import React from "react";
 
 export default function Sidebar() {
   return (
-    <div className="fixed top-0 bottom-0 w-64 overflow-y-auto ">
-      <div className="flex px-3 sticky top-0 bg-white z-50">
+    <div className="fixed top-0 bottom-0 w-64 z-50 ">
+      <div className="flex relative px-3 sticky top-0 bg-white z-50">
         {/* <h2 className='text-[#00A76F] font-bold mr-3 p-4'>A</h2> */}
         {/* text-[#019A6B] text-[#FFAC82] */}
         <h3 className="text-[#5d596c] text-2xl font-semibold p-4">
@@ -13,7 +13,7 @@ export default function Sidebar() {
       </div>
 
       {/* Navbar */}
-      <nav>
+      <nav className="fixed top-[62px] bottom-0 w-64 overflow-y-auto ">
         <ul className="menu menu-md w-full">
           {/* Basic dashboard items */}
           <li className="pb-2 text-[#6f6b7d]">
