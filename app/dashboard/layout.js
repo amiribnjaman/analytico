@@ -1,4 +1,5 @@
-import Sidebar from '../../components/sidebar'
+import Sidebar from '@/components/sidebar'
+import DashboardTopbar from '@/components/dashboardTopbar'
 
 export default function DashboardLayout({ children }) {
   return (
@@ -7,8 +8,12 @@ export default function DashboardLayout({ children }) {
         <Sidebar />
       </aside>
 
-      <div>
+        <div className='bg-[#F8F7FA] w-[80%]'>
+      <div className='p-6 '>
+        {/* topbar  */}
+        <DashboardTopbar />
       {children}
+        </div>
       </div>
     
     </div>

@@ -25,3 +25,7 @@
     )
     rgb(var(--background-start-rgb));
 } */
+
+.menu ul::before{
+  width: 0;
+}
