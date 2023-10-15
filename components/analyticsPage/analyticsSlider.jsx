@@ -26,10 +26,10 @@ export default function AnalyticsSlider() {
       // modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={30}
       slidesPerView={1}
-      // autoplay={{
-      //   delay: 2500,
-      //   disableOnInteraction: false,
-      // }}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
       pagination={{
         clickable: true,
       }}

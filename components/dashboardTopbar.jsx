@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function dashboardTopbar() {
   return (
-    <div className="w-full mb-2 sticky top-0 py-4 z-50">
+    <div id="topbar" className="w-full mb-2 sticky top-0 pt-4 z-50">
       <div className="navbar bg-base-100 shadow-lg rounded-md px-8 sticky top-0">
         <div className="flex-1">
           <a className="cursor-pointer normal-case text-xl text-[#5d596c]">

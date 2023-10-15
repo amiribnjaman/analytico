@@ -13,7 +13,9 @@ export default function DashboardLayout({ children }) {
         <div className="px-6 relative">
           {/* Top Navbar  */}
           <DashboardTopbar />
+          <div className="pt-4">
           {children}
+          </div>
           {/* Footer */}
           <Footer />
         </div>

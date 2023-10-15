@@ -20,6 +20,11 @@ export default function revenueGeneratedCard() {
 
       <h4 className="text-xl font-semibold mt-2">92.7k</h4>
       <h5 className="text-[#6F6B7D] text-sm">Revenue Generated</h5>
+
+          {/* charts */}
+          <div>
+              
+          </div>
     </div>
   );
 }

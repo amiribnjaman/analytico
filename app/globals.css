@@ -17,6 +17,9 @@
 }
 
 
+#topbar{
+  backdrop-filter: blur(6px);
+}
 .menu ul::before{
   width: 0;
 }
