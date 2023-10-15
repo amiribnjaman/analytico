@@ -49,13 +49,13 @@ const data = [
   {
     name: "Page F",
     uv: 2390,
-    pv: 2650,
+    pv: 2850,
     amt: 2500,
   },
   {
     name: "Page G",
     uv: 3490,
-    pv: 3100,
+    pv: 3500,
     amt: 2100,
   },
   // {
@@ -99,7 +99,7 @@ export default function revenueGeneratedCard() {
       {/* charts */}
       <div className="overflow-hidden -pl-16">
         <AreaChart
-          width={280}
+          width={255}
           height={140}
           data={data}
           margin={{ top: 0, right: 30, left: 0, bottom: 0 }}
