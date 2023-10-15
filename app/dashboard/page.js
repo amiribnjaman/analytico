@@ -6,15 +6,14 @@ export default function Dashboard() {
   return (
     <div className="grid gap-y-5 mb-4">
       {/* Analytics top section */}
-      <div className="grid grid-cols-2 gap-6 h-[250px]">
-        {/* <div className="bg-[#00A76F] py-5 rounded px-3">ddd</div> */}
+      <div className="grid grid-cols-2 gap-6">
         <AnalyticsSlider />
-
         <div className="grid grid-cols-2 gap-6">
           <SalesOverview />
           <RevenueGeneratedCard />
         </div>
       </div>
+
       {/* Analytics middle section */}
       <div className="grid grid-cols-2 gap-6 h-[250px]">
         <div className="bg-[#00A76F] py-5 rounded px-3">ddd</div>

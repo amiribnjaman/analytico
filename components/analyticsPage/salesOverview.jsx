@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SalesOverview() {
   return (
-    <div className="bg-white rounded p-5">
+    <div className="bg-white rounded p-5 shadow-sm">
       {/* sales top */}
       <div className="flex justify-between">
         <div>
@@ -69,7 +69,7 @@ export default function SalesOverview() {
 
         {/* Progressbar */}
         <div className="flex mt-6">
-        <progress className="progress progress-accent" value="70" max="100" />
+        <progress id="progress-accent" className="progress progress-accent" value="70" max="100" />
         {/* <progress className="progress progress-accent" value="100" max="80"/> */}
         </div>
       </div>

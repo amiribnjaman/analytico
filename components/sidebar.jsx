@@ -40,7 +40,7 @@ export default function Sidebar() {
                 </svg>
                 <div className="flex justify-between">
                   <span>Dashboard</span>
-                  <span className="bg-[#00A76F] text-white px-[12px] py-[1px] mr-2 rounded-full text-sm">3</span>
+                  <span className="bg-[#7367F0] text-white px-[12px] py-[1px] mr-2 rounded-full text-sm">3</span>
                 </div>
               </summary>
               <ul>

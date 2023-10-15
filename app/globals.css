@@ -100,7 +100,7 @@ body::-webkit-scrollbar-track {
   left: 12.5px;
 }
 
-.progress-primary{
+#progress-custom{
   background-color: #c7c5df !important;
 }
 .progress{
