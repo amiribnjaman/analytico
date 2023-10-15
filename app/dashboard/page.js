@@ -1,5 +1,6 @@
 import AnalyticsSlider from "@/components/analyticsPage/analyticsSlider";
 import SalesOverview from "@/components/analyticsPage/salesOverview";
+import RevenueGeneratedCard from "@/components/analyticsPage/revenueGeneratedCard";
 
 export default function Dashboard() {
   return (
@@ -11,7 +12,7 @@ export default function Dashboard() {
 
         <div className="grid grid-cols-2 gap-6">
           <SalesOverview />
-          <div className="bg-[#00A76F] py-3 rounded px-2">ddd</div>
+          <RevenueGeneratedCard />
         </div>
       </div>
       {/* Analytics middle section */}

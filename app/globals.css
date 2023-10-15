@@ -98,8 +98,19 @@ body::-webkit-scrollbar-track {
 }
 
 .progress-primary{
-  background-color: #EAE8FD !important;
+  background-color: #c7c5df !important;
 }
 .progress{
   background-color: #D9F8FC !important;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  top: 17px !important;
+  left: 195px !important;
+}
+.swiper-pagination-bullet{
+  background-color: #ABA4F6 !important;
+}
+.swiper-pagination-bullet-active{
+  background-color: white !important;
 }
