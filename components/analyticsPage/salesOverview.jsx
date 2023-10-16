@@ -69,7 +69,7 @@ export default function SalesOverview() {
 
         {/* Progressbar */}
         <div className="flex mt-6">
-        <progress id="progress-accent" className="progress progress-accent" value="70" max="100" />
+        <progress id="progress__accent" className="progress progress-accent" value="70" max="100" />
         {/* <progress className="progress progress-accent" value="100" max="80"/> */}
         </div>
       </div>

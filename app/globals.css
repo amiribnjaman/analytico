@@ -103,7 +103,7 @@ body::-webkit-scrollbar-track {
 #progress-custom{
   background-color: #c7c5df !important;
 }
-.progress{
+#progress__accent.progress{
   background-color: #D9F8FC !important;
 }
 
@@ -116,4 +116,8 @@ body::-webkit-scrollbar-track {
 }
 .swiper-pagination-bullet-active{
   background-color: white !important;
+}
+#earning__progress.progress{
+  height: 3.5px !important;
+  width: 75px !important;
 }
