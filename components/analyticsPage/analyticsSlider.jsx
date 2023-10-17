@@ -12,7 +12,7 @@ import {
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import AnalytsSliderSingleCard from "./analyticSliderSingleCard";
+import AnalytsSliderSingleCard from "./AnalyticSliderSingleCard";
 
 // Import Swiper styles
 import "swiper/css";
@@ -96,12 +96,13 @@ export default function AnalyticsSlider() {
       spaceBetween={30}
       slidesPerView={1}
       autoplay={{
-        delay: 2500,
+        delay: 2000,
         disableOnInteraction: false,
       }}
       pagination={{
         clickable: true,
       }}
+      draggable={true}
       
       modules={[Autoplay, Pagination]}
       onSwiper={(swiper) => console.log(swiper)}
