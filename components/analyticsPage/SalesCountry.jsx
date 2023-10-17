@@ -1,25 +1,29 @@
-import React from 'react'
-import SalesCountrySingleCard from './SalesCountrySingleCard'
-import { promises as fs } from 'fs';
+import React from "react";
+import SalesCountrySingleCard from "./SalesCountrySingleCard";
+import { promises as fs } from "fs";
 
 export default async function SalesCountry() {
-
   // const getCountryData = async () => {
-    const file = await fs.readFile(process.cwd() + '/public/country.json', 'utf8');
-    const countries = JSON.parse(file);
+  const file = await fs.readFile(
+    process.cwd() + "/public/country.json",
+    "utf8"
+  );
+  const countries = JSON.parse(file);
   // }
 
   // console.log(getCountryData())
 
   return (
-      <div className="bg-white rounded p-6 pb-0 shadow-sm">
-         <div className="flex justify-between items-center">
+    <div className="bg-white rounded p-6 shadow-sm">
+      <div className="flex justify-between items-center">
         {/* Salse by country heading */}
         <div>
           <h4 className="text-xl font-semibold mt-2 text-[#5D596C]">
-          Sales by Countries
+            Sales by Countries
           </h4>
-          <h5 className="text-[#A5A3AE] text-xs font-semibold">Monthly Sales Overview</h5>
+          <h5 className="text-[#A5A3AE] text-xs font-semibold">
+            Monthly Sales Overview
+          </h5>
         </div>
 
         {/* Ellipsis dotted/more option */}
@@ -41,20 +45,14 @@ export default async function SalesCountry() {
             </svg>
           </button>
         </div>
-          </div> 
-          
-          {/* Sales country body */}
-          <div className='mt-8'>
-              {/* <SalesCountrySingleCard />
-              <SalesCountrySingleCard />
-              <SalesCountrySingleCard />
-              <SalesCountrySingleCard />
-              <SalesCountrySingleCard />
-              <SalesCountrySingleCard /> */}
-        {
-          countries.map(country => <SalesCountrySingleCard country={country} /> )
-        }
-          </div>
+      </div>
+
+      {/* Sales country body */}
+      <div className="mt-8">
+        {countries.map((country) => (
+          <SalesCountrySingleCard country={country} />
+        ))}
+      </div>
     </div>
-  )
+  );
 }

@@ -34,7 +34,7 @@ export default function Dashboard() {
       </div>
 
       {/* Anatytics bottom section */}
-      <div className="grid grid-cols-3 grid-rows-3 gap-6">
+      <div className="grid grid-cols-3 gap-6">
         <SourceVisits />
         <div className="bg-[#00A76F] py-5 rounded px-3 col-span-2 row-span-1">
           ddd
