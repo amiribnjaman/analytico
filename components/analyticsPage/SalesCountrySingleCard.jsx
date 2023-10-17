@@ -5,7 +5,7 @@ export default function SalesCountrySingleCard(data) {
   const { flag, country, sell, per, growth } = data.country;
 
   return (
-    <div className="flex mb-[3px] justify-between">
+    <div className="flex mt-4 mb-[3px] justify-between">
       <div className="flex gap-x-3">
         <Image
           src={flag}
