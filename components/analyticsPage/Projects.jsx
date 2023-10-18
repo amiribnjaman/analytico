@@ -1,13 +1,54 @@
-import React from "react";
-import { promises as fs } from "fs";
+"use client";
 
-export default async function Projects() {
+import React, { useState, useEffect } from "react";
+// import { promises as fs } from "fs";
+import projects from "@/public/data/projects.json";
+
+export default function Projects() {
   // Fetch Projets data through the local file stystem
-  const file = await fs.readFile(
-    process.cwd() + "/public/data/projects.json",
-    "utf8"
-  );
-  const projects = JSON.parse(file);
+  // const file = await fs.readFile(
+  //   process.cwd() + "/public/data/projects.json",
+  //   "utf8"
+  // );
+  // const projects = JSON.parse(file);
+  // const [projects, setProjects] = useState([]);
+
+  // useEffect(() => {
+  //   fetch("/public/data/projects.json")
+  //     .then((res) => res.json)
+  //     .then((data) => setProjects(data));
+  // }, []);
+
+
+
+  // Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const recordsPerPage = 5;
+  const lastIndex = currentPage * recordsPerPage;
+  const firstIndex = lastIndex - recordsPerPage;
+
+  const projectData = projects.slice(firstIndex, lastIndex);
+  const npage = Math.ceil(projects.length / recordsPerPage);
+  const numbers = [...Array(npage + 1).keys()].slice(1);
+
+  // handle next page
+  const nextPage = () => {
+    if (currentPage !== lastIndex) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  // handle previous page
+  const prevPage = () => {
+    if (currentPage !== firstIndex) {
+      setCurrentPage(currentPage - 1);
+    } 
+  };
+
+  // Change current page
+  const changeCurPage = (index) => {
+    setCurrentPage(index);
+  };
 
   return (
     <div className="bg-white  rounded p-6 shadow-sm">
@@ -54,7 +95,7 @@ export default async function Projects() {
           </thead>
           <tbody>
             {/* maping project for showing into table */}
-            {projects.map((project) => (
+            {projectData.map((project) => (
               <tr>
                 <th>
                   <svg
@@ -96,14 +137,44 @@ export default async function Projects() {
           </tbody>
         </table>
         {/* pagination */}
-        <div className="flex justify-between">
-          <div></div>
+        <div className="flex justify-between mt-6">
+          <div>
+          <h6 className="text-sm text-[#A8AAAE] ">Showing {firstIndex + 1} to {lastIndex}</h6>
+          </div>
 
-          <div className="join">
-            <button className="join-item btn">1</button>
-            <button className="join-item btn btn-active">2</button>
-            <button className="join-item btn">3</button>
-            <button className="join-item btn">4</button>
+          <div className="flex gap-1">
+            {currentPage == 1 ? <button
+              onClick={prevPage}
+              className=" btn btn-sm capitalize  font-normal" disabled
+            >
+              Previous
+            </button> : <button
+              onClick={prevPage}
+              className=" btn btn-sm capitalize  font-normal" 
+            >
+              Previous
+            </button>}
+            {numbers.map((n) => (
+              <button
+                onClick={() => changeCurPage(n)}
+                className={`${
+                  currentPage === n ? "btn-active" : ""
+                } join-item btn btn-sm`}
+              >
+                {n}
+              </button>
+            ))}
+            {numbers.length === currentPage ? <button
+              onClick={nextPage}
+              className={`btn capitalize font-normal btn-sm`} disabled
+            >
+              Next
+            </button> : <button
+              onClick={nextPage}
+              className={`btn capitalize font-normal btn-sm`}
+            >
+              Next
+            </button>}
           </div>
         </div>
       </div>
