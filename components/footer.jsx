@@ -2,7 +2,7 @@ import React from "react";
 
 export default function footer() {
   return (
-    <footer className="footer items-center p-4 ">
+    <footer className="footer items-center p-5 pt-10">
       <aside className="items-center grid-flow-col ">
         <p className="text-[17px]">
           Copyright © 2023 - All right reserved by Amir

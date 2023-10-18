@@ -3,15 +3,12 @@ import SalesCountrySingleCard from "./SalesCountrySingleCard";
 import { promises as fs } from "fs";
 
 export default async function SalesCountry() {
-  // const getCountryData = async () => {
+  // Fetch coutry data through the local file stystem
   const file = await fs.readFile(
-    process.cwd() + "/public/country.json",
+    process.cwd() + "/public/data/country.json",
     "utf8"
   );
   const countries = JSON.parse(file);
-  // }
-
-  // console.log(getCountryData())
 
   return (
     <div className="bg-white rounded p-6 shadow-sm">

@@ -1,0 +1,56 @@
+[
+    {
+		"name": "Web Design",
+		"deadline": "10th may 2024",
+        "leader": "Jack",
+        "team": "4" 
+	},
+    {
+		"name": "Web Developement",
+		"deadline": "10th Dec 2023",
+        "leader": "Jonas",
+        "team": "3" 
+	},
+    {
+		"name": "SEO marketing",
+		"deadline": "01th Jan 2024",
+        "leader": "Hasan",
+        "team": "4" 
+	},
+    {
+		"name": "Figma Dashboards",
+		"deadline": "10th may 2024",
+        "leader": "Jack",
+        "team": "4" 
+	},
+    {
+		"name": "App Design",
+		"deadline": "10th may 2024",
+        "leader": "Jack",
+        "team": "4" 
+	},
+    {
+		"name": "Logo Designs",
+		"deadline": "10th may 2024",
+        "leader": "Jack",
+        "team": "4" 
+	},
+    {
+		"name": "Admin Template",
+		"deadline": "10th may 2024",
+        "leader": "Jack",
+        "team": "4" 
+	},
+    {
+		"name": "Social Banners",
+		"deadline": "10th may 2024",
+        "leader": "Jack",
+        "team": "4"
+	},
+    {
+		"name": "IOS App Design",
+		"deadline": "10th may 2024",
+        "leader": "Jack",
+        "team": "4" 
+	}
+]

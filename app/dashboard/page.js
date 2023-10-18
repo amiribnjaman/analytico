@@ -5,8 +5,9 @@ import RearningReportsCard from "@/components/analyticsPage/EarningReportsCard";
 import SuportTracker from "@/components/analyticsPage/SuportTracker";
 import SalesCountry from "@/components/analyticsPage/SalesCountry";
 import TotalEarning from "@/components/analyticsPage/TotalEarning";
-import MonthlyCampaign from '@/components/analyticsPage/MonthlyCampaign'
+import MonthlyCampaign from "@/components/analyticsPage/MonthlyCampaign";
 import SourceVisits from "@/components/analyticsPage/SourceVisits";
+import Projects from "@/components/analyticsPage/Projects";
 
 export default function Dashboard() {
   return (
@@ -35,9 +36,11 @@ export default function Dashboard() {
 
       {/* Anatytics bottom section */}
       <div className="grid grid-cols-3 gap-6">
+        <div className="grid-cols-1">
         <SourceVisits />
-        <div className="bg-[#00A76F] py-5 rounded px-3 col-span-2 row-span-1">
-          ddd
+        </div>
+        <div className="col-span-2">
+        <Projects />
         </div>
       </div>
     </div>
