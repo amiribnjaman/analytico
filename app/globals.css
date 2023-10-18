@@ -16,6 +16,11 @@
   }
 }
 
+body{
+  /* font-family: 'Public Sans', sans-serif; */
+  /* font-family: 'Raleway', sans-serif; */
+
+}
 
 #topbar{
   backdrop-filter: blur(6px);
@@ -26,6 +31,11 @@
 
 .menu :where(li ul) {
   margin-left: 0 !important;
+}
+
+#sidebar .sidebar__active{
+  background: linear-gradient(to right, #7367F0, #9D94F5) !important;
+  color: #fff;
 }
 /* 
 .menu :where(li > details > summary):after, .menu :where(li > .menu-dropdown-toggle):after {

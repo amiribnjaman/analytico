@@ -1,10 +1,13 @@
-// 'use client'
+"use client";
 
 import Link from "next/link";
 import React from "react";
+import { usePathname } from "next/navigation";
 
 export default function Sidebar() {
   // const [toggleMenu, setToggleMenu] = React.useState(false)
+  const pathname = usePathname();
+  const getPath = pathname.split("/")[pathname.split("/").length - 1];
 
   return (
     <div id="sidebar" className="fixed top-0 bottom-0 w-64 z-50 ">
@@ -17,7 +20,10 @@ export default function Sidebar() {
       </div>
 
       {/* Navbar */}
-      <nav className="fixed top-[62px] bottom-0 w-64 overflow-y-auto ">
+      <nav
+        id="sidebar"
+        className="fixed top-[62px] bottom-0 w-64 overflow-y-auto "
+      >
         <ul className="menu menu-md w-full">
           {/* Basic dashboard items */}
           <li className="pb-2 text-[#6f6b7d]">
@@ -40,19 +46,37 @@ export default function Sidebar() {
                 </svg>
                 <div className="flex justify-between">
                   <span>Dashboard</span>
-                  <span className="bg-[#7367F0] text-white px-[12px] py-[1px] mr-2 rounded-full text-sm">3</span>
+                  <span className="bg-[#7367F0] text-white px-[12px] py-[1px] mr-2 rounded-full text-sm">
+                    3
+                  </span>
                 </div>
               </summary>
               <ul>
                 <li>
-                  <Link href="/dashboard" className="text-[17px]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 512 512"
-                      className="w-2 h-2"
-                    >
-                      <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
-                    </svg>
+                  <Link
+                    href="/dashboard"
+                    className={`text-[17px] ${
+                      getPath == "dashboard" ? "sidebar__active" : ""
+                    }`}
+                  >
+                    {getPath == "dashboard" ? (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        className="w-2 text-white h-2"
+                      >
+                        <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+                      </svg>
+                    ) : (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        className="w-2 h-2"
+                      >
+                        <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+                      </svg>
+                    )}
                     Analytics
                   </Link>
                 </li>

@@ -19,8 +19,6 @@ export default function Projects() {
   //     .then((data) => setProjects(data));
   // }, []);
 
-
-
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 5;
@@ -42,7 +40,7 @@ export default function Projects() {
   const prevPage = () => {
     if (currentPage !== firstIndex) {
       setCurrentPage(currentPage - 1);
-    } 
+    }
   };
 
   // Change current page
@@ -131,7 +129,50 @@ export default function Projects() {
                 
               </td> */}
                 <td>{project.leader}</td>
-                <td>{project.team}</td>
+                <td>
+                  {project.team == 3 ? (
+                    <div className="avatar-group -space-x-6">
+                      <div className="avatar">
+                        <div className="w-12">
+                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                      </div>
+                      <div className="avatar">
+                        <div className="w-12">
+                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                      </div>
+                      <div className="avatar">
+                        <div className="w-12">
+                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="avatar-group -space-x-6">
+                      <div className="avatar">
+                        <div className="w-12">
+                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                      </div>
+                      <div className="avatar">
+                        <div className="w-12">
+                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                      </div>
+                      <div className="avatar">
+                        <div className="w-12">
+                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                      </div>
+                      <div className="avatar">
+                        <div className="w-12">
+                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </td>
               </tr>
             ))}
           </tbody>
@@ -139,21 +180,28 @@ export default function Projects() {
         {/* pagination */}
         <div className="flex justify-between mt-6">
           <div>
-          <h6 className="text-sm text-[#A8AAAE] ">Showing {firstIndex + 1} to {lastIndex}</h6>
+            <h6 className="text-sm text-[#A8AAAE] ">
+              Showing {firstIndex + 1} to {lastIndex}
+            </h6>
           </div>
 
           <div className="flex gap-1">
-            {currentPage == 1 ? <button
-              onClick={prevPage}
-              className=" btn btn-sm capitalize  font-normal" disabled
-            >
-              Previous
-            </button> : <button
-              onClick={prevPage}
-              className=" btn btn-sm capitalize  font-normal" 
-            >
-              Previous
-            </button>}
+            {currentPage == 1 ? (
+              <button
+                onClick={prevPage}
+                className=" btn btn-sm capitalize  font-normal"
+                disabled
+              >
+                Previous
+              </button>
+            ) : (
+              <button
+                onClick={prevPage}
+                className=" btn btn-sm capitalize  font-normal"
+              >
+                Previous
+              </button>
+            )}
             {numbers.map((n) => (
               <button
                 onClick={() => changeCurPage(n)}
@@ -164,17 +212,22 @@ export default function Projects() {
                 {n}
               </button>
             ))}
-            {numbers.length === currentPage ? <button
-              onClick={nextPage}
-              className={`btn capitalize font-normal btn-sm`} disabled
-            >
-              Next
-            </button> : <button
-              onClick={nextPage}
-              className={`btn capitalize font-normal btn-sm`}
-            >
-              Next
-            </button>}
+            {numbers.length === currentPage ? (
+              <button
+                onClick={nextPage}
+                className={`btn capitalize font-normal btn-sm`}
+                disabled
+              >
+                Next
+              </button>
+            ) : (
+              <button
+                onClick={nextPage}
+                className={`btn capitalize font-normal btn-sm`}
+              >
+                Next
+              </button>
+            )}
           </div>
         </div>
       </div>
