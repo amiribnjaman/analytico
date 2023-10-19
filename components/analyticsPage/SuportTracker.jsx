@@ -15,7 +15,6 @@ export default function suportTracker() {
     chart: {
       height: 850,
       offsetY: -10,
-      paddingTop: 20
     },
     plotOptions: {
       radialBar: {

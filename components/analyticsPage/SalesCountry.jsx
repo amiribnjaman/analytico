@@ -46,8 +46,8 @@ export default async function SalesCountry() {
 
       {/* Sales country body */}
       <div className="mt-8">
-        {countries.map((country) => (
-          <SalesCountrySingleCard country={country} />
+        {countries.map((country, i) => (
+          <SalesCountrySingleCard key={i} country={country} />
         ))}
       </div>
     </div>
