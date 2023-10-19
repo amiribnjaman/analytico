@@ -1,3 +1,4 @@
+ import Head from 'next/head';
 import AnalyticsSlider from "@/components/analyticsPage/AnalyticsSlider";
 import SalesOverview from "@/components/analyticsPage/SalesOverview";
 import RevenueGeneratedCard from "@/components/analyticsPage/RevenueGeneratedCard";
@@ -9,8 +10,14 @@ import MonthlyCampaign from "@/components/analyticsPage/MonthlyCampaign";
 import SourceVisits from "@/components/analyticsPage/SourceVisits";
 import Projects from "@/components/analyticsPage/Projects";
 
+export const metadata = {
+  title: "Analytico | Dashboard analytics",
+  description: "",
+};
+
 export default function Dashboard() {
   return (
+    <>
     <div className="grid gap-y-5 mb-4">
       {/* Analytics top section */}
       <div className="grid grid-cols-2 gap-6">
@@ -43,6 +50,6 @@ export default function Dashboard() {
         <Projects />
         </div>
       </div>
-    </div>
+    </div></>
   );
 }

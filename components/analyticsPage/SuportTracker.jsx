@@ -10,11 +10,11 @@ export default function suportTracker() {
 
   // console.log(showMoreOption)
   // const handleMoreOption = () => setShowMoreOption(!showMoreOption)
-  const series = [80]
+  const series = [85]
   const chartData = {
     chart: {
       height: 850,
-      offsetY: -10,
+      offsetY: 0,
     },
     plotOptions: {
       radialBar: {
@@ -27,14 +27,15 @@ export default function suportTracker() {
         dataLabels: {
           name: {
             fontSize: "13px",
+            fontWeight: '450',
             color: '#AAA8B2',
-            offsetY: -10,
+            offsetY: -15,
           },
           value: {
             offsetY: 10,
-            fontSize: "25px",
-            fontWeight: 'semi-bold',
-            color: undefined,
+            fontSize: "35px",
+            fontWeight: '550',
+            color: '#5D596C',
             formatter: function (val) {
               return val + "%";
             },

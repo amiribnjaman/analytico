@@ -15,33 +15,34 @@ import {
 } from "recharts";
 
 const data = [
-  {
-    name: "Sa",
-    pv: 1550,
-  },
-  {
-    name: "Su",
-    pv: 1550,
-  },
+  
   {
     name: "Mo",
-    pv: 1550,
+    pv: 750,
   },
   {
     name: "Tu",
-    pv: 1550,
+    pv: 800,
   },
   {
     name: "We",
-    pv: 1550,
+    pv: 1100,
   },
   {
     name: "Th",
-    pv: 1550,
+    pv: 1000,
   },
   {
     name: "Fr",
-    pv: 1550,
+    pv: 1500,
+  },
+  {
+    name: "Sa",
+    pv: 950,
+  },
+  {
+    name: "Su",
+    pv: 1180,
   },
 ];
 
@@ -61,7 +62,7 @@ export default function RearningReportsCard() {
             Earning Reports
           </h4>
           <h5 className="text-[#A5A3AE] text-xs font-semibold">
-            Weekly earnings overview{" "}
+            Weekly earnings overview
           </h5>
         </div>
 
@@ -99,7 +100,7 @@ export default function RearningReportsCard() {
         </div>
 
         {/* Earning chart */}
-        <div>
+        <div className='earning'>
           <ComposedChart width={280} height={200} data={data}>
             <XAxis
               dataKey="name"
@@ -110,7 +111,9 @@ export default function RearningReportsCard() {
             <Bar
               dataKey="pv"
               barSize={15}
-              fill="#E8E7FD"
+              fill="#E8E7FD" //
+              innerRadius={110}
+          outerRadius={140}
               style={{ borderRadius: "12px" }}
             />
           </ComposedChart>

@@ -19,6 +19,8 @@ export default function Projects() {
   //     .then((data) => setProjects(data));
   // }, []);
 
+  const [searchValue, setSearchValue] = useState("");
+
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 5;
@@ -48,6 +50,15 @@ export default function Projects() {
     setCurrentPage(index);
   };
 
+  //Search Operation
+  const searchVal = projects.filter((d) =>
+    d.name.toLowerCase().includes(searchValue.toLowerCase())
+  );
+  
+  // const handleSearch = (value) => {
+  //   console.log(value);
+  // };
+
   return (
     <div className="bg-white  rounded p-6 pb-4 shadow-sm">
       {/* Projects heading */}
@@ -64,6 +75,7 @@ export default function Projects() {
           <input
             type="text"
             id="search__project"
+            onChange={(e) => setSearchValue(e.target.value)}
             className="input h-10 input-bordered inline-block w-full max-w-xs"
           />
         </div>
@@ -72,7 +84,7 @@ export default function Projects() {
       {/* Project list heading */}
       <hr className="my-3" />
       <div className="overflow-x-auto">
-        <table className="table">
+        {searchVal || projectData ? <table className="table">
           {/* head */}
           <thead>
             <tr className="">
@@ -93,7 +105,88 @@ export default function Projects() {
           </thead>
           <tbody>
             {/* maping project for showing into table */}
-            {projectData.map((project) => (
+            {searchVal ? searchVal.map((project) => (
+              <tr>
+                <td className="py-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1"
+                    stroke="currentColor"
+                    class="w-5 h-5 shadow-md text-[#37CB79] cursor-pointer outline-none rounded-full"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </td>
+                <td className="flex gap-8 py-3 -ml-6 items-center">
+                  <label>
+                    <input
+                      type="checkbox"
+                      className="checkbox checkbox-primary rounded-sm"
+                    />
+                  </label>
+                  <div className="flex flex-col">
+                    <div className="font-semibold">{project.name}</div>
+                    <h5 className="m-0 font-normal text-sm text-[#ACAAB4]">
+                      {project.deadline}
+                    </h5>
+                  </div>
+                </td>
+                {/* <td>
+                
+              </td> */}
+                <td className="py-0">{project.leader}</td>
+                <td className="py-0">
+                  {project.team == 3 ? (
+                    <div className="avatar-group -space-x-6">
+                      <div className="avatar">
+                        <div className="w-10 h-10">
+                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                      </div>
+                      <div className="avatar">
+                        <div className="w-10 h-10">
+                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                      </div>
+                      <div className="avatar">
+                        <div className="w-10 h-10">
+                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="avatar-group -space-x-6">
+                      <div className="avatar">
+                        <div className="w-10 h-10">
+                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                      </div>
+                      <div className="avatar">
+                        <div className="w-10 h-10">
+                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                      </div>
+                      <div className="avatar">
+                        <div className="w-10 h-10">
+                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                      </div>
+                      <div className="avatar">
+                        <div className="w-10 h-10">
+                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </td>
+              </tr>
+            )) : projectData.map((project) => (
               <tr>
                 <td className="py-0">
                   <svg
@@ -176,7 +269,7 @@ export default function Projects() {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table> : <h5>Nothing ot show</h5>}
         <hr className="mt-3" />
         {/* pagination */}
         <div className="flex justify-between mt-4">

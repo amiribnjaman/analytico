@@ -132,6 +132,14 @@ body::-webkit-scrollbar-track {
   width: 75px !important;
 }
 
+/* Earning card */
+.earning text {
+  fill: #AAA8B2 !important;
+  font-size: 13px !important;
+}
+.earning .recharts-bar-rectangle path{
+  border-radius: 15px !important;
+}
 /* Support tracker chart */
 #SvgjsG1032{
   width: 400px !important;

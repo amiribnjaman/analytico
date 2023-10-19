@@ -21,9 +21,9 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 // images
-import Img1 from '@/public/Images/img1.png'
-import Img2 from '@/public/Images/img2.png'
-import Img3 from '@/public/Images/img3.png'
+import Img1 from "@/public/Images/img1.png";
+import Img2 from "@/public/Images/img2.png";
+import Img3 from "@/public/Images/img3.png";
 
 // Static data for slider
 const data = [
@@ -103,7 +103,8 @@ export default function AnalyticsSlider() {
         clickable: true,
       }}
       draggable={true}
-      
+      // effect="fade"
+      // fadeEffect={(crossFade = true)}
       modules={[Autoplay, Pagination]}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
@@ -116,19 +117,13 @@ export default function AnalyticsSlider() {
       })} */}
 
       <SwiperSlide className="rounded">
-        <AnalytsSliderSingleCard
-          data={data[0]}
-        />
+        <AnalytsSliderSingleCard data={data[0]} />
       </SwiperSlide>
       <SwiperSlide className="rounded">
-        <AnalytsSliderSingleCard
-          data={data[1]}
-        />
+        <AnalytsSliderSingleCard data={data[1]} />
       </SwiperSlide>
       <SwiperSlide className="rounded">
-        <AnalytsSliderSingleCard
-          data={data[2]}
-        />
+        <AnalytsSliderSingleCard data={data[2]} />
       </SwiperSlide>
     </Swiper>
   );

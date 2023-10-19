@@ -4,6 +4,7 @@ import Footer from "@/components/footer";
 
 export default function DashboardLayout({ children }) {
   return (
+    
     <div className="flex">
       <aside className="w-64 h-full shadow">
         <Sidebar />
