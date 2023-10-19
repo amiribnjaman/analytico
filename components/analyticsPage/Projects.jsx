@@ -49,7 +49,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="bg-white  rounded p-6 shadow-sm">
+    <div className="bg-white  rounded p-6 pb-4 shadow-sm">
       {/* Projects heading */}
       <div className="flex justify-between items-center">
         <div>
@@ -70,12 +70,12 @@ export default function Projects() {
       </div>
 
       {/* Project list heading */}
-      <hr className="my-4" />
+      <hr className="my-3" />
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
           <thead>
-            <tr>
+            <tr className="">
               <th></th>
               <th className="flex gap-8 -ml-6 items-center">
                 <label>
@@ -95,7 +95,7 @@ export default function Projects() {
             {/* maping project for showing into table */}
             {projectData.map((project) => (
               <tr>
-                <th>
+                <td className="py-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -110,8 +110,8 @@ export default function Projects() {
                       d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                </th>
-                <th className="flex gap-8 -ml-6 items-center">
+                </td>
+                <td className="flex gap-8 py-3 -ml-6 items-center">
                   <label>
                     <input
                       type="checkbox"
@@ -124,26 +124,26 @@ export default function Projects() {
                       {project.deadline}
                     </h5>
                   </div>
-                </th>
+                </td>
                 {/* <td>
                 
               </td> */}
-                <td>{project.leader}</td>
-                <td>
+                <td className="py-0">{project.leader}</td>
+                <td className="py-0">
                   {project.team == 3 ? (
                     <div className="avatar-group -space-x-6">
                       <div className="avatar">
-                        <div className="w-12">
+                        <div className="w-10 h-10">
                           <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                         </div>
                       </div>
                       <div className="avatar">
-                        <div className="w-12">
+                        <div className="w-10 h-10">
                           <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                         </div>
                       </div>
                       <div className="avatar">
-                        <div className="w-12">
+                        <div className="w-10 h-10">
                           <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                         </div>
                       </div>
@@ -151,22 +151,22 @@ export default function Projects() {
                   ) : (
                     <div className="avatar-group -space-x-6">
                       <div className="avatar">
-                        <div className="w-12">
+                        <div className="w-10 h-10">
                           <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                         </div>
                       </div>
                       <div className="avatar">
-                        <div className="w-12">
+                        <div className="w-10 h-10">
                           <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                         </div>
                       </div>
                       <div className="avatar">
-                        <div className="w-12">
+                        <div className="w-10 h-10">
                           <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                         </div>
                       </div>
                       <div className="avatar">
-                        <div className="w-12">
+                        <div className="w-10 h-10">
                           <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                         </div>
                       </div>
@@ -177,8 +177,9 @@ export default function Projects() {
             ))}
           </tbody>
         </table>
+        <hr className="mt-3" />
         {/* pagination */}
-        <div className="flex justify-between mt-6">
+        <div className="flex justify-between mt-4">
           <div>
             <h6 className="text-sm text-[#A8AAAE] ">
               Showing {firstIndex + 1} to {lastIndex}

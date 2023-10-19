@@ -27,7 +27,7 @@ export default function Sidebar() {
         <ul className="menu menu-md w-full">
           {/* Basic dashboard items */}
           <li className="pb-2 text-[#6f6b7d]">
-            <details>
+            <details open>
               <summary className="text-[16px] font-semibold ">
                 {/* fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5" */}
                 <svg
@@ -51,7 +51,7 @@ export default function Sidebar() {
                   </span>
                 </div>
               </summary>
-              <ul>
+              <ul className="ml-2">
                 <li>
                   <Link
                     href="/dashboard"
