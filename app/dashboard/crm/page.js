@@ -15,7 +15,7 @@ export default function CRM() {
       <div className="grid grid-cols-6 gap-6">
         <div className="grid col-span-4 gap-6">
           {/* CRM TOP LEFT SECTION */}
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-4 gap-6">
             <div className="col-span-1">
               <Sales />
             </div>
