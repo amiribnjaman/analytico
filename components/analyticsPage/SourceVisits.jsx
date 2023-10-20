@@ -189,8 +189,8 @@ export default function SourceVisits() {
             </p>
             <div className="mt-3 flex justify-between gap-3">
               <h6>2.15k</h6>
-              <span className="bg-[#DFF7E9] py-.5 px-3 rounded text-[#37CB79]">
-                +9.1%
+              <span className="bg-[#FCE5E6] py-.5 px-3 rounded text-[#EA5455]">
+                -1.1%
               </span>
             </div>
           </div>

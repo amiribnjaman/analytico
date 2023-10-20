@@ -44,7 +44,7 @@ export default function suportTracker() {
         track: {
           background: 'transparent',
           strokeWidth: '80%',
-          margin: 0, // margin is in pixels
+          margin: 0, 
           dropShadow: {
             enabled: false,
             top: -3,
@@ -62,11 +62,9 @@ export default function suportTracker() {
         shade: "dark",
         shadeIntensity: 0,
         inverseColors: false,
-        // gradientToColors: ['#ABE5A1'],
         opacityFrom: 0.5,
         opacityTo: 1.5,
         stops: [0,100],
-        // colorStops: ['#7367F0','#CDC8FA']
       },
     },
     stroke: {

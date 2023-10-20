@@ -12,8 +12,6 @@ export default function Sidebar() {
   return (
     <div id="sidebar" className="fixed top-0 bottom-0 w-64 z-50 ">
       <div className="flex relative px-3 sticky top-0 bg-white z-50">
-        {/* <h2 className='text-[#00A76F] font-bold mr-3 p-4'>A</h2> */}
-        {/* text-[#019A6B] text-[#FFAC82] */}
         <h3 className="text-[#5d596c] text-2xl font-semibold p-4">
           Analyti<span className="text-[#00A76F]">co</span>
         </h3>
@@ -55,37 +53,30 @@ export default function Sidebar() {
                 <li>
                   <Link
                     href="/dashboard"
-                    className={`text-[17px] ${
+                    className={`text-[16px] ${
                       getPath == "dashboard" ? "sidebar__active" : ""
                     }`}
                   >
-                    {getPath == "dashboard" ? (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512"
-                        fill="currentColor"
-                        className="w-2 text-white h-2"
-                      >
-                        <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
-                      </svg>
-                    ) : (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512"
-                        className="w-2 h-2"
-                      >
-                        <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
-                      </svg>
-                    )}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                      fill="currentColor"
+                      className={`w-2 h-2 ${getPath == 'dashboard' ? 'text-white' : ''}`}
+                    >
+                      <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+                    </svg>
                     Analytics
                   </Link>
                 </li>
                 <li>
-                  <Link href="/dashboard/login">
+                  <Link href="/dashboard/crm" className={`text-[15px] ${
+                      getPath == "crm" ? "sidebar__active" : ""
+                    }`}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
-                      className="w-2 h-2"
+                      fill="currentColor"
+                      className={`w-2 h-2 ${getPath == 'crm' ? 'text-white' : ''}`}
                     >
                       <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
                     </svg>

@@ -1,4 +1,4 @@
- import Head from 'next/head';
+
 import AnalyticsSlider from "@/components/analyticsPage/AnalyticsSlider";
 import SalesOverview from "@/components/analyticsPage/SalesOverview";
 import RevenueGeneratedCard from "@/components/analyticsPage/RevenueGeneratedCard";
@@ -11,7 +11,7 @@ import SourceVisits from "@/components/analyticsPage/SourceVisits";
 import Projects from "@/components/analyticsPage/Projects";
 
 export const metadata = {
-  title: "Analytico | Dashboard analytics",
+  title: "Dashboard analytics - Analytico",
   description: "",
 };
 

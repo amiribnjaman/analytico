@@ -52,15 +52,12 @@ export default function TotalEarning() {
 
   return (
     <div className="bg-white rounded p-6 pb-0 shadow-sm overflow-hidden">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center mt-2">
         {/* Total Earning heading */}
         <div>
-          <h4 className="text-xl font-semibold mt-2 text-[#5D596C]">
+          <h4 className="text-xl font-semibold text-[#5D596C]">
             Total Earning
-          </h4>
-          <h2 className="text-[#5D596C] text-5xl font-normal mt-4">
-            87% <span className="text-sm text-[#28c76f]">25.8%</span>{" "}
-          </h2>
+          </h4> 
         </div>
 
         {/* Ellipsis dotted/more option */}
@@ -84,6 +81,13 @@ export default function TotalEarning() {
         </div>
       </div>
 
+      {/* Total earning middle */}
+      <div>
+<h2 className="text-[#5D596C] text-5xl font-normal mt-4">
+            87% <span className="text-sm text-[#28c76f]">25.8%</span>{" "}
+          </h2>
+      </div>
+
       {/* Total earning charts */}
       <div className="max-h-[270px] overflow-hidden">
       <div className='-ml-[80px] -mt-[35px] overflow-hidden max-h-[260px]'>
@@ -98,8 +102,8 @@ export default function TotalEarning() {
       </div>
 
       {/* Total earning bottom */}
-      <div className="mt-8">
-        <div className="mb-4 flex justify-between items-center gap-y-4">
+      <div className="mt-6">
+        <div className="mb-4 flex justify-between items-center gap-y-5">
           <div className="flex items-center gap-3">
           <svg
                 className="bg-[#EAE8FD] w-9 h-9 rounded text-[#7367F0] p-2"
@@ -155,7 +159,7 @@ export default function TotalEarning() {
             </h4>
           </div>
         </div>
-        <div className="flex mt-6 justify-between items-center">
+        {/* <div className="flex mt-6 justify-between items-center">
           <div className="flex items-center gap-3">
           <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +186,7 @@ export default function TotalEarning() {
               +$98
             </h4>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -25,6 +25,7 @@ export default function dashboardTopbar() {
         </div>
 
         <div className="flex gap-6">
+          {/* Language */}
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="cursor-pointer">
               <div className="indicator">
@@ -60,6 +61,7 @@ export default function dashboardTopbar() {
             </div>
           </div>
 
+          {/* Theme */}
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="cursor-pointer">
               <div className="indicator">
@@ -95,6 +97,7 @@ export default function dashboardTopbar() {
             </div>
           </div>
 
+          {/* Notification */}
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="cursor-pointer">
               <div className="indicator">
@@ -134,6 +137,7 @@ export default function dashboardTopbar() {
             </div>
           </div>
 
+          {/* Profile */}
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
@@ -142,14 +146,20 @@ export default function dashboardTopbar() {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] py-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
+              <li className="block gap-2">
+                <div>
+                <div className="w-10 rounded-full h-10 bg-[#ddd]">
+                  <div></div>
+                </div>
+                <div>
+                  <h4 className="text-lg">User</h4>
+                  <h6 className="text-sm">Admin</h6>
+                </div>
+                </div>
               </li>
+              <hr />
               <li>
                 <a>Settings</a>
               </li>

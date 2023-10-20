@@ -36,9 +36,9 @@ export default function MontlhyCampaign() {
       </div>
 
       {/* Monthly campaign bottom */}
-      <div className="flex flex-col gap-y-3 mt-3">
+      <div className="flex flex-col gap-y-2 mt-1">
         {/* Single card */}
-        <div className="mt-6 flex justify-between items-center">
+        <div className="mt-4 flex justify-between items-center">
           <div className="flex items-center gap-3 mt-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"

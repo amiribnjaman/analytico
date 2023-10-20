@@ -36,6 +36,7 @@ body{
 #sidebar .sidebar__active{
   background: linear-gradient(to right, #7367F0, #9D94F5) !important;
   color: #fff;
+  font-size: 17px;
 }
 /* 
 .menu :where(li > details > summary):after, .menu :where(li > .menu-dropdown-toggle):after {
