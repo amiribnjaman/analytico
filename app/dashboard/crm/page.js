@@ -3,6 +3,7 @@ import Sessions from "@/components/crmPage/Sessions";
 import TotalCard from "@/components/crmPage/TotalCard";
 import RevenueGrowth from "@/components/crmPage/RevenueGrowth";
 import EarningReport from "@/components/crmPage/EarningReport";
+import SalesChart from "@/components/crmPage/SalesChart";
 
 export const metadata = {
   title: "Customer Management - Analytico",
@@ -80,9 +81,10 @@ export default function CRM() {
       {/* CRM MIDDLE SECTION */}
       <div className="grid gap-6 grid-cols-3">
         {/* CRM EARNING REPORT */}
-        <div className="col-span-2">
+        {/* <div className="col-span-2"> */}
           <EarningReport />
-        </div>
+          <SalesChart />
+        {/* </div> */}
       </div>
     </div>
   );
