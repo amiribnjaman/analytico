@@ -72,7 +72,8 @@ export default function Sessions() {
         </div>
       </div>
 
-      <div className="p-6 pt-1">
+{/* Sessions card bottom */}
+      <div className="px-4 py-6 pt-[7px]">
         <div className="flex justify-between items-center">
           <h4 className="text-2xl text-[#5D596C] font-semibold mt-2">45.1k</h4>
           <h5 className="text-[#29C770] text-sm mt-2">-16.2%</h5>

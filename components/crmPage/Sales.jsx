@@ -87,7 +87,8 @@ export default function Sales() {
         </AreaChart>
       </div>
 
-      <div className="p-6 pt-0">
+{/* Sales card bottom */}
+      <div className="px-4 py-6 pt-[3px]">
         <div className="flex justify-between items-center">
           <h4 className="text-2xl text-[#5D596C] font-semibold mt-2">175k</h4>
           <h5 className="text-[#EA5455] text-sm mt-2">-16.2%</h5>

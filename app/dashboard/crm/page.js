@@ -2,6 +2,7 @@ import Sales from "@/components/crmPage/Sales";
 import Sessions from "@/components/crmPage/Sessions";
 import TotalCard from "@/components/crmPage/TotalCard";
 import RevenueGrowth from "@/components/crmPage/RevenueGrowth";
+import EarningReport from "@/components/crmPage/EarningReport";
 
 export const metadata = {
   title: "Customer Management - Analytico",
@@ -10,7 +11,7 @@ export const metadata = {
 
 export default function CRM() {
   return (
-    <div className="grid gap-y-5 mb-4">
+    <div className="grid gap-y-5 mb-4 gap-6">
       {/* CRM TOP SECTION */}
       <div className="grid grid-cols-6 gap-6">
         <div className="grid col-span-4 gap-6">
@@ -46,11 +47,21 @@ export default function CRM() {
             {/* Total sales */}
             <div className="col-span-1">
               <TotalCard
-                svg={<svg
-                  className="bg-[#D9F8FC] w-9 h-9 rounded text-[#00CFE8] p-2"
-                    xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" stroke-width="1" fill="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-</svg>}
+                svg={
+                  <svg
+                    className="bg-[#D9F8FC] w-9 h-9 rounded text-[#00CFE8] p-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    stroke-width="1"
+                    fill="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
+                    />
+                  </svg>
+                }
                 title={"Total Sales"}
                 subTitle={"Last week"}
                 amount={"$ 4,673"}
@@ -61,8 +72,16 @@ export default function CRM() {
         </div>
         <div className="grid col-span-2 gap-6">
           <div>
-                <RevenueGrowth />
+            <RevenueGrowth />
           </div>
+        </div>
+      </div>
+
+      {/* CRM MIDDLE SECTION */}
+      <div className="grid gap-6 grid-cols-3">
+        {/* CRM EARNING REPORT */}
+        <div className="col-span-2">
+          <EarningReport />
         </div>
       </div>
     </div>

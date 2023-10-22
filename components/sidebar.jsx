@@ -10,7 +10,7 @@ export default function Sidebar() {
   const getPath = pathname.split("/")[pathname.split("/").length - 1];
 
   return (
-    <div id="sidebar" className="fixed top-0 bottom-0 w-64 z-50 ">
+    <div id="sidebar" className="fixed shadow-lg top-0 bottom-0 w-64 z-50 ">
       <div className="flex relative px-3 sticky top-0 bg-white z-50">
         <h3 className="text-[#5d596c] text-2xl font-semibold p-4">
           Analyti<span className="text-[#00A76F]">co</span>

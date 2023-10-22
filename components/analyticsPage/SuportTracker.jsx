@@ -13,8 +13,8 @@ export default function suportTracker() {
   const series = [85]
   const chartData = {
     chart: {
-      height: 850,
-      offsetY: 0,
+      height: 840,
+      offsetY: 10,
     },
     plotOptions: {
       radialBar: {
@@ -22,8 +22,8 @@ export default function suportTracker() {
         margin: 5,
         size: "70%"
       },
-        startAngle: -125,
-        endAngle: 120,
+        startAngle: -135,
+        endAngle: 130,
         dataLabels: {
           name: {
             fontSize: "13px",
@@ -33,7 +33,7 @@ export default function suportTracker() {
           },
           value: {
             offsetY: 10,
-            fontSize: "35px",
+            fontSize: "37px",
             fontWeight: '550',
             color: '#5D596C',
             formatter: function (val) {
@@ -68,7 +68,7 @@ export default function suportTracker() {
       },
     },
     stroke: {
-      dashArray: 8,
+      dashArray: 9,
     },
     strokeWidth: 5,
     labels: ["Completed task"],
@@ -195,8 +195,8 @@ export default function suportTracker() {
         </div>
       </div>
         </div>
-        <div className='col-span-2 relative -ml-[87px]'>
-          <Chart width={460} type="radialBar" options={chartData} series={series} />
+        <div className='col-span-2 relative -ml-[83px]'>
+          <Chart width={450} type="radialBar" options={chartData} series={series} />
         </div>
       </div>
 
