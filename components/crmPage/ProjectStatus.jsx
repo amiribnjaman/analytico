@@ -68,15 +68,18 @@ export default function ProjectStatus() {
   return (
     <div className="bg-white rounded shadow-sm">
       {/* Project Status headings */}
-      <div className="flex justify-between items-center pb-2 p-6">
+      <div className="flex justify-between items-center pt-7 px-6 pb-0">
         <div>
           <h4 className="text-lg font-semibold mt-2 text-[#5D596C]">
             Project Status
           </h4>
+          <h5 className="text-[#A5A3AE] text-[13px] font-semibold">
+            
+          </h5>
         </div>
 
         {/* Ellipsis dotted/more option */}
-        <div className="relative">
+        <div className="relative pt-1">
           <button>
             <svg
               className="cursor-pointer text-[#A9A7B1] w-6 h-6"
@@ -143,7 +146,7 @@ export default function ProjectStatus() {
             series={data.series}
             type="area"
             height={200}
-            width={280}
+            width={290}
           />
         </div>
         {/* Body bottom */}

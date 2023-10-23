@@ -222,8 +222,11 @@ export default function EarningReport() {
     // ],
     options: {
       chart: {
-        height: 300,
+        height: 270,
         type: "bar",
+        toolbar: {
+          show: false,
+        },
       },
       colors: ["#E8E7FD"],
       plotOptions: {
@@ -495,12 +498,12 @@ export default function EarningReport() {
           <div className="mt-6">
             <TabPanel>
             <div className="max-h-[320px] overflow-hidden">
-              <div className="w-full -mt-[55px] overflow-hidden max-h-[320px] pr-2 flex justify-center">
+              <div className="w-full overflow-hidden max-h-[280px] pr-2 flex justify-center">
                   <Chart
                     options={data.options}
                     series={data.series1}
                     type="bar"
-                    height={320}
+                    height={280}
                     width={550}
                   />
                 </div>
@@ -508,12 +511,12 @@ export default function EarningReport() {
             </TabPanel>
             <TabPanel>
             <div className="max-h-[320px] overflow-hidden">
-              <div className="w-full -mt-[55px] overflow-hidden max-h-[320px] pr-2 flex justify-center">
+            <div className="w-full overflow-hidden max-h-[280px] pr-2 flex justify-center">
                   <Chart
                     options={data.options}
                     series={data.series2}
                     type="bar"
-                    height={320}
+                    height={280}
                     width={550}
                   />
                 </div>
@@ -521,12 +524,12 @@ export default function EarningReport() {
             </TabPanel>
             <TabPanel>
             <div className="max-h-[320px] overflow-hidden">
-              <div className="w-full -mt-[55px] overflow-hidden max-h-[320px] pr-2 flex justify-center">
+            <div className="w-full overflow-hidden max-h-[280px] pr-2 flex justify-center">
                   <Chart
                     options={data.options}
                     series={data.series3}
                     type="bar"
-                    height={320}
+                    height={280}
                     width={550}
                   />
                 </div>
@@ -534,12 +537,12 @@ export default function EarningReport() {
             </TabPanel>
             <TabPanel>
               <div className="max-h-[320px] overflow-hidden">
-              <div className="w-full -mt-[55px] overflow-hidden max-h-[320px] pr-2 flex justify-center">
+              <div className="w-full overflow-hidden max-h-[280px] pr-2 flex justify-center">
                   <Chart
                     options={data.options}
                     series={data.series4}
                     type="bar"
-                    height={320}
+                    height={280}
                     width={550}
                   />
                 </div>
