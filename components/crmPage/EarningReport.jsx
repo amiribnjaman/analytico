@@ -97,10 +97,6 @@ export default function EarningReport() {
           },
           {
             x: "Category C",
-            y: 10.0,
-          },
-          {
-            x: "Category C",
             y: 8.7,
           },
           {
@@ -146,10 +142,6 @@ export default function EarningReport() {
           {
             x: "Category C",
             y: 7.9,
-          },
-          {
-            x: "Category C",
-            y: 10.0,
           },
           {
             x: "Category C",
@@ -199,10 +191,6 @@ export default function EarningReport() {
           },
           {
             x: "Category C",
-            y: 10.0,
-          },
-          {
-            x: "Category C",
             y: 8.7,
           },
           {
@@ -220,7 +208,7 @@ export default function EarningReport() {
           },
           {
             x: "Category A",
-            y: 9.5,
+            y: 9.0,
             fillColor: '#7367F0'
           },
         ],
@@ -367,7 +355,7 @@ export default function EarningReport() {
   };
 
   return (
-    <div className="bg-white col-span-2 rounded p-6 shadow-sm">
+    <div className="bg-white col-span-2 rounded p-6 pb-0 shadow-sm">
       {/* Earning headings */}
       <div className="flex justify-between items-center">
         <div>
@@ -506,52 +494,52 @@ export default function EarningReport() {
           {/* Tabs content */}
           <div className="mt-6">
             <TabPanel>
-              <div className="max-h-[321px] overflow-hidden">
-                <div className="w-full -mt-[55px] overflow-hidden max-h-[345px] pr-2 flex justify-center">
+            <div className="max-h-[320px] overflow-hidden">
+              <div className="w-full -mt-[55px] overflow-hidden max-h-[320px] pr-2 flex justify-center">
                   <Chart
                     options={data.options}
                     series={data.series1}
                     type="bar"
-                    height={355}
+                    height={320}
                     width={550}
                   />
                 </div>
               </div>
             </TabPanel>
             <TabPanel>
-              <div className="max-h-[321px] overflow-hidden">
-              <div className="w-full -mt-[55px] overflow-hidden max-h-[345px] pr-2 flex justify-center">
+            <div className="max-h-[320px] overflow-hidden">
+              <div className="w-full -mt-[55px] overflow-hidden max-h-[320px] pr-2 flex justify-center">
                   <Chart
                     options={data.options}
                     series={data.series2}
                     type="bar"
-                    height={355}
+                    height={320}
                     width={550}
                   />
                 </div>
               </div>
             </TabPanel>
             <TabPanel>
-              <div className="max-h-[321px] overflow-hidden">
-              <div className="w-full -mt-[55px] overflow-hidden max-h-[345px] pr-2 flex justify-center">
+            <div className="max-h-[320px] overflow-hidden">
+              <div className="w-full -mt-[55px] overflow-hidden max-h-[320px] pr-2 flex justify-center">
                   <Chart
                     options={data.options}
                     series={data.series3}
                     type="bar"
-                    height={355}
+                    height={320}
                     width={550}
                   />
                 </div>
               </div>
             </TabPanel>
             <TabPanel>
-              <div className="max-h-[321px] overflow-hidden">
-              <div className="w-full -mt-[55px] overflow-hidden max-h-[345px] pr-2 flex justify-center">
+              <div className="max-h-[320px] overflow-hidden">
+              <div className="w-full -mt-[55px] overflow-hidden max-h-[320px] pr-2 flex justify-center">
                   <Chart
                     options={data.options}
                     series={data.series4}
                     type="bar"
-                    height={355}
+                    height={320}
                     width={550}
                   />
                 </div>
