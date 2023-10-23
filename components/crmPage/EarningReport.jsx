@@ -284,7 +284,7 @@ export default function EarningReport() {
         position: "bottom",
 
         axisBorder: {
-          show: true,
+          show: false,
         },
         axisTicks: {
           show: false,

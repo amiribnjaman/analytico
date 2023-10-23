@@ -1,10 +1,74 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+import dynamic from "next/dynamic";
+
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 export default function ProjectStatus() {
+  const data = {
+    series: [
+      {
+        name: "STOCK ABC",
+        data: [0,0, 80,80,50,50, 18,18, 41, 41,90,90,60,60, 100, 100,],
+      },
+    ],
+    options: {
+      chart: {
+        height: 200,
+        type: "area",
+        toolbar: {
+          show: false,
+        },
+      },
+      colors: ["#FFE7D0"],
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        colors: ['#FF9F43'],
+        curve: "straight",
+      },
+      yaxis: {
+        enabled: false,
+        labels: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+      },
+      grid: {
+        show: false,
+      },
+      
+      xaxis: {
+        enabled: false,
+        labels: {
+          show: false,
+        },
+        show: false,
+        axisBorder: {
+          show: false,
+        },
+        axisTicks: {
+          show: false,
+        },
+        // type: 'datetime',
+        // categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+      },
+      tooltip: {
+        enabled: false,
+        x: {
+          format: "dd/MM/yy HH:mm",
+        },
+      },
+    },
+  };
+
   return (
-    <div className="bg-white rounded p-6 shadow-sm">
+    <div className="bg-white rounded shadow-sm">
       {/* Project Status headings */}
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center pb-2 p-6">
         <div>
           <h4 className="text-lg font-semibold mt-2 text-[#5D596C]">
             Project Status
@@ -32,9 +96,9 @@ export default function ProjectStatus() {
       </div>
 
       {/* Project Status body */}
-      <div className="mt-4">
+      <div className="">
         {/* Body topper */}
-        <div className="mb-4 mt-8">
+        <div className="p-6 pb-0">
           <div className="flex justify-between text-[#28C76F] items-center gap-3">
             <div className="flex gap-3 items-center">
               <svg
@@ -73,8 +137,17 @@ export default function ProjectStatus() {
 
         {/* Body Chart */}
 
+        <div className="">
+          <Chart
+            options={data.options}
+            series={data.series}
+            type="area"
+            height={200}
+            width={280}
+          />
+        </div>
         {/* Body bottom */}
-        <div className="mt-8 gap-y-6">
+        <div className="gap-y-6 pt-0 p-6">
           <div className="flex items-center justify-between">
             <h4>Donates</h4>
             <div className="flex gap-5">

@@ -52,16 +52,18 @@ export default function BrowserStates() {
       </div>
 
       {/* Browser states body */}
-      <div className="pt-0 p-6 pr-1">
+      <div className="pt-0 p-6 pr-4">
         {browserStates.map((data) => (
-          <div className="flex justify-between gap-1 items-center mt-5 text-start">
-            <div class='w-1/7 justify-self-end'>
+          <div className="flex justify-between gap-2 items-center mt-5 text-start">
+            <div class='w-1/6 justify-self-end'>
             <Image src={data.img} alt="" height={26} width={26} />
             </div>
-            <div className="mr-2 w-3/5 flex items-center justify-self-start gap-2 text-left">
+            <div className="mr-2 w-3/5 items-center justify-self-start gap-2 text-left">
               <h5 className="justify-self-start text-[16px] text-start">{data.title}</h5>
-              <h6 className="text-[16px]">{data.data}%</h6>
             </div>
+            <div>
+            <h6 className="text-[16px] mr-3">{data.data}%</h6>
+              </div>
             <div className='w-1/5'>
             <Progress type="circle" strokeColor={data.fill}  percent={data.data}  size={33} format={() => ''} />
             </div>
