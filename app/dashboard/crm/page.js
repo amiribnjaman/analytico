@@ -7,6 +7,7 @@ import SalesChart from "@/components/crmPage/SalesChart";
 import BrowserStates from "@/components/crmPage/BrowserStates";
 import ProjectStatus from "@/components/crmPage/ProjectStatus";
 import ActiveProject from "@/components/crmPage/ActiveProject";
+import Transaction from "@/components/crmPage/Transaction";
 
 export const metadata = {
   title: "Customer Management - Analytico",
@@ -100,6 +101,14 @@ export default function CRM() {
         </div>
           <ActiveProject />
         {/* </div> */}
+      </div>
+
+
+      {/* CRM BOTTOM SECTION */}
+      <div className="grid grid-cols-2 gap-6">
+        <div>
+        <Transaction />
+        </div>
       </div>
     </div>
   );
