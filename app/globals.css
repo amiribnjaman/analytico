@@ -181,3 +181,10 @@ body::-webkit-scrollbar-track {
   outline: none !important;
   border-radius: 10px !important;
 }
+
+
+/*------------ Transaction section----------------- */
+/* transaction tabel */
+.table :where(tbody) :where(tr:not(:last-child)), .table :where(tbody) :where(tr:first-child:last-child) {
+  border-bottom-width: 0px !important;
+}

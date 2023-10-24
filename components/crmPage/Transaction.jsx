@@ -1,22 +1,29 @@
-import React from 'react'
-import { Divider, Radio, Table } from 'antd';
+"use client";
+
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Transaction() {
-    
-//   const [selectionType, setSelectionType] = useState('checkbox');
-    
+  const [transactionData, setTransactionData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/api/transaction")
+      .then((res) => res.json())
+      .then((data) => setTransactionData(data));
+  }, []);
+
   return (
     <div className="bg-white rounded shadow-sm">
-    {/* Transaction heading */}
-    <div className="flex justify-between items-center pt-4 px-6 pb-4">
-      <div>
-        <h4 className="text-[18px] font-semibold mt-2 text-[#5D596C]">
-          Last Transaction
-        </h4>
-      </div>
+      {/* Transaction heading */}
+      <div className="flex justify-between items-center pt-4 px-6 pb-4">
+        <div>
+          <h4 className="text-[18px] font-semibold mt-2 text-[#5D596C]">
+            Last Transaction
+          </h4>
+        </div>
 
-      {/* Ellipsis dotted/more option */}
-      <div className="relative pt-3">
+        {/* Ellipsis dotted/more option */}
+        <div className="relative pt-3">
           <button>
             <svg
               className="cursor-pointer text-[#A9A7B1] w-6 h-6"
@@ -33,113 +40,65 @@ export default function Transaction() {
             </svg>
           </button>
         </div>
-    </div>
+      </div>
 
-          {/* Trasaction body */}
-          <hr />
-          <div>
-          <div className="overflow-x-auto">
-        <table className="table">
-          {/* head */}
-          <thead>
-            <tr className="">
-              <th className="flex gap-8 ml-2 items-center font-[500]">CARD
-              </th>
-              <th className='font-[500]'>DATE</th>
-              <th className='font-[500]'>STATUS</th>
-              <th className='font-[500]'>TREND</th>
-            </tr>
-          </thead>
-          {/* <tbody>
-            {/* maping project for showing data into table *
-            { projectData.map((project) => (
-              <tr>
-                <td className="py-0">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1"
-                    stroke="currentColor"
-                    class="w-5 h-5 shadow-md text-[#37CB79] cursor-pointer outline-none rounded-full"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </td>
-                <td className="flex gap-8 py-3 -ml-6 items-center">
-                  <label>
-                    <input
-                      type="checkbox"
-                      className="checkbox checkbox-primary rounded-sm"
-                    />
-                  </label>
-                  <div className="flex flex-col">
-                    <div className="font-semibold">{project.name}</div>
-                    <h5 className="m-0 font-normal text-sm text-[#ACAAB4]">
-                      {project.deadline}
-                    </h5>
-                  </div>
-                </td>
-                {/* <td>
-                
-              </td> *
-                <td className="py-0">{project.leader}</td>
-                <td className="py-0">
-                  {project.team == 3 ? (
-                    <div className="avatar-group -space-x-6">
-                      <div className="avatar">
-                        <div className="w-10 h-10">
-                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                        </div>
-                      </div>
-                      <div className="avatar">
-                        <div className="w-10 h-10">
-                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                        </div>
-                      </div>
-                      <div className="avatar">
-                        <div className="w-10 h-10">
-                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="avatar-group -space-x-6">
-                      <div className="avatar">
-                        <div className="w-10 h-10">
-                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                        </div>
-                      </div>
-                      <div className="avatar">
-                        <div className="w-10 h-10">
-                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                        </div>
-                      </div>
-                      <div className="avatar">
-                        <div className="w-10 h-10">
-                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                        </div>
-                      </div>
-                      <div className="avatar">
-                        <div className="w-10 h-10">
-                          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </td>
+      {/* Trasaction body */}
+      <div>
+        <div className="overflow-x-auto">
+          <table className="table">
+            {/* head */}
+            <thead>
+              <tr className="">
+                <th className="flex gap-8 ml-2 items-center font-[500]">
+                  CARD
+                </th>
+                <th className="font-[500]">DATE</th>
+                <th className="font-[500]">STATUS</th>
+                <th className="font-[500]">TREND</th>
               </tr>
-            ))}
+            </thead>
             
-          </tbody> */}
-        </table>
-        <hr className="mt-3" />
-        {/* pagination */}
-        {/* <div className="flex justify-between mt-4">
+            <tbody>
+              {/* maping project for showing data into table */}
+              {transactionData.map((data) => (
+                <tr>
+                  <td className="flex gap-8 py-3 items-center">
+                    <div className="flex gap-4 items-center">
+                      <div >
+                        <Image
+                          src={data.img}
+                          alt=""
+                          height={10}
+                          width={45}
+                          style={{height: '30px', padding: '3px'}}
+                          className="bg-[#F6F6F7] rounded"
+                        />
+                      </div>
+                      <div className="font-semibold">
+                        <h4 className="text-[#6F6B7D] text-[16px]">{data.title}</h4>
+                        <h5 className="m-0 font-normal text-sm text-[#A8A6B1]">
+                          {data.data}
+                        </h5>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <h5 className="text-[16px] font-[500] text-[#6F6B7D] m-0">{data.type}</h5>
+                    <h6 className="text-sm text-[#ABA9B3]">{data.date}</h6>
+                  </td>
+                  <td>
+                    <h6 className={`text-center text-sm rounded px-[4px] py-[1px] text-[${data.color}] bg-[${data.bg}]`}>{data.status}</h6>
+                  </td>
+                  <td>
+                    <h6 className="text-[#6F6B7D] text-[16px] font-[500]">{data.amount}</h6>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <hr className="mt-3" />
+          {/* pagination */}
+          {/* <div className="flex justify-between mt-4">
           <div>
             <h6 className="text-sm text-[#A8AAAE] ">
               Showing {firstIndex + 1} to {lastIndex}
@@ -191,9 +150,8 @@ export default function Transaction() {
             )}
           </div>
         </div> */}
+        </div>
       </div>
-          </div>
     </div>
-  )
+  );
 }
-    
