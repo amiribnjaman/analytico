@@ -124,9 +124,9 @@ export default function Sidebar() {
               <ul className="ml-2">
                 <li>
                   <Link
-                    href="/dashboard"
+                    href="/dashboard/ecommerce-dashboard"
                     className={`text-[16px] ${
-                      getPath == "" ? "sidebar__active" : ""
+                      getPath == "ecommerce-dashboard" ? "sidebar__active" : ""
                     }`}
                   >
                     <svg
@@ -134,7 +134,7 @@ export default function Sidebar() {
                       viewBox="0 0 512 512"
                       fill="currentColor"
                       className={`w-2 h-2 ${
-                        getPath == "" ? "text-white" : ""
+                        getPath == "ecommerce-dashboard" ? "text-white" : ""
                       }`}
                     >
                       <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />

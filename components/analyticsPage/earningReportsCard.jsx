@@ -139,7 +139,7 @@ export default function RearningReportsCard() {
             <svg
               className="bg-[#EAE8FD] w-8 h-7 rounded text-[#7367F0] px-2 py-1"
               fill="currentColor"
-              strokeWidth={0.5}
+              strokeWidth='1'
               xmlns="http://www.w3.org/2000/svg"
               height="1em"
               viewBox="0 0 320 512"
