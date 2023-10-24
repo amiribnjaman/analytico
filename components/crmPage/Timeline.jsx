@@ -57,7 +57,7 @@ export default function Timeline() {
                 <span className="text-[12px] text-[#A5A3AE] font-[500]">Today</span>
               </div>
               <p class="text-sm">
-                Project meeting with john <a href="">@10:15am</a>{" "}
+                Project meeting with john <a  href="javascript:void(0)" className="underline text-[#2AC870]">@10:15am</a>{" "}
               </p>
               <div className="flex gap-3 mt-3 items-center">
                 <img className="w-10 h-10 bg-[#ddd] rounded-full " src="" alt />

@@ -504,7 +504,7 @@ export default function EarningReport() {
                     series={data.series1}
                     type="bar"
                     height={280}
-                    width={550}
+                    width={590}
                   />
                 </div>
               </div>
@@ -517,7 +517,7 @@ export default function EarningReport() {
                     series={data.series2}
                     type="bar"
                     height={280}
-                    width={550}
+                    width={590}
                   />
                 </div>
               </div>
@@ -530,7 +530,7 @@ export default function EarningReport() {
                     series={data.series3}
                     type="bar"
                     height={280}
-                    width={550}
+                    width={590}
                   />
                 </div>
               </div>
@@ -543,7 +543,7 @@ export default function EarningReport() {
                     series={data.series4}
                     type="bar"
                     height={280}
-                    width={550}
+                    width={590}
                   />
                 </div>
               </div>
