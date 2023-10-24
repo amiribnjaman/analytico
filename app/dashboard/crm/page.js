@@ -8,6 +8,7 @@ import BrowserStates from "@/components/crmPage/BrowserStates";
 import ProjectStatus from "@/components/crmPage/ProjectStatus";
 import ActiveProject from "@/components/crmPage/ActiveProject";
 import Transaction from "@/components/crmPage/Transaction";
+import Timeline from "@/components/crmPage/Timeline";
 
 export const metadata = {
   title: "Customer Management - Analytico",
@@ -109,6 +110,7 @@ export default function CRM() {
         <div>
         <Transaction />
         </div>
+        <Timeline />
       </div>
     </div>
   );

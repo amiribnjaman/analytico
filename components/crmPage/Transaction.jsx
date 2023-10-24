@@ -42,6 +42,7 @@ export default function Transaction() {
         </div>
       </div>
 
+      <hr />
       {/* Trasaction body */}
       <div>
         <div className="overflow-x-auto">
@@ -61,9 +62,9 @@ export default function Transaction() {
             <tbody>
               {/* maping project for showing data into table */}
               {transactionData.map((data) => (
-                <tr>
-                  <td className="flex gap-8 py-3 items-center">
-                    <div className="flex gap-4 items-center">
+                <tr className='py-1'>
+                  <td className="flex gap-8 items-center">
+                    <div className="flex gap-6 items-center">
                       <div >
                         <Image
                           src={data.img}
@@ -87,7 +88,7 @@ export default function Transaction() {
                     <h6 className="text-sm text-[#ABA9B3]">{data.date}</h6>
                   </td>
                   <td>
-                    <h6 className={`text-center text-sm rounded px-[4px] py-[1px] text-[${data.color}] bg-[${data.bg}]`}>{data.status}</h6>
+                    <h6 className={`text-center text-[14px] rounded px-[4px] py-[2px] text-[${data.color}] bg-[${data.bg}]`}>{data.status}</h6>
                   </td>
                   <td>
                     <h6 className="text-[#6F6B7D] text-[16px] font-[500]">{data.amount}</h6>
