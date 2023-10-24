@@ -54,7 +54,7 @@ body{
 }
 
 
-/* Aside scrollbar */
+/* ------------------------------------Aside scrollbar */
 ::-webkit-scrollbar {
   width: 1.5px;
   /* display: none; */
@@ -73,14 +73,25 @@ body{
   background: #acabab; 
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+#sidebar ::-webkit-scrollbar-thumb {
+  display: none;
+  background: #acabab; 
 }
+
+#sidebar:hover ::-webkit-scrollbar-thumb{
+  display: block;
+}
+
+
+
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} */
 
 
 /* Body scrollbar  */
 body::-webkit-scrollbar {
-  width: 7px;
+  width: 8px;
 }
 
 body::-webkit-scrollbar-track {

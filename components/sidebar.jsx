@@ -19,14 +19,13 @@ export default function Sidebar() {
 
       {/* Navbar */}
       <nav
-        id="sidebar"
         className="fixed top-[62px] bottom-0 w-64 overflow-y-auto "
       >
         <ul className="menu menu-md w-full">
           {/* Basic dashboard items */}
           <li className="pb-2 text-[#6f6b7d]">
             <details open>
-              <summary className="text-[16px] font-semibold ">
+              <summary className="text-[16px] font-normal ">
                 {/* fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5" */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -42,6 +41,7 @@ export default function Sidebar() {
                     d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
                   />
                 </svg>
+
                 <div className="flex justify-between">
                   <span>Dashboard</span>
                   <span className="bg-[#7367F0] text-white px-[12px] py-[1px] mr-2 rounded-full text-sm">
@@ -61,7 +61,9 @@ export default function Sidebar() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
                       fill="currentColor"
-                      className={`w-2 h-2 ${getPath == 'dashboard' ? 'text-white' : ''}`}
+                      className={`w-2 h-2 ${
+                        getPath == "dashboard" ? "text-white" : ""
+                      }`}
                     >
                       <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
                     </svg>
@@ -69,19 +71,159 @@ export default function Sidebar() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/dashboard/crm" className={`text-[15px] ${
+                  <Link
+                    href="/dashboard/crm"
+                    className={`text-[15px] ${
                       getPath == "crm" ? "sidebar__active" : ""
-                    }`}>
+                    }`}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
                       fill="currentColor"
-                      className={`w-2 h-2 ${getPath == 'crm' ? 'text-white' : ''}`}
+                      className={`w-2 h-2 ${
+                        getPath == "crm" ? "text-white" : ""
+                      }`}
                     >
                       <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
                     </svg>
                     CRM
                   </Link>
+                </li>
+              </ul>
+            </details>
+          </li>
+
+          {/* eCommerce menu and submenus */}
+          <li className="pb-2 text-[#6f6b7d]">
+            <details>
+              <summary className="text-[16px] font-normal ">
+                {/* fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5" */}
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1"
+                  stroke="currentColor"
+                  class="w-[23px] h-[23px]"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+                  />
+                </svg>
+                <div className="flex justify-between">
+                  <span>eCommerce</span>
+                  {/* <span className="bg-[#7367F0] text-white px-[12px] py-[1px] mr-2 rounded-full text-sm">
+                    3
+                  </span> */}
+                </div>
+              </summary>
+              <ul className="ml-2">
+                <li>
+                  <Link
+                    href="/dashboard"
+                    className={`text-[16px] ${
+                      getPath == "" ? "sidebar__active" : ""
+                    }`}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                      fill="currentColor"
+                      className={`w-2 h-2 ${
+                        getPath == "" ? "text-white" : ""
+                      }`}
+                    >
+                      <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+                    </svg>
+                    Dahsboard
+                  </Link>
+                </li>
+
+                {/* ----------------------------------------------Products with submenus------------------------------------------ */}
+                <li className="pb-2 text-[#6f6b7d]">
+                  <details>
+                    <summary className="text-[16px] font-normal ">
+                      <div className="flex items-center justify-between gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 512 512"
+                          fill="currentColor"
+                          className={`w-2 h-2 ${
+                            getPath == "" ? "text-white" : ""
+                          }`}
+                        >
+                          <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+                        </svg>
+                        <span>Products</span>
+                      </div>
+                    </summary>
+                    <ul className="ml-2">
+                      <li>
+                        <Link
+                          href="/dashboard"
+                          className={`text-[16px] ${
+                            getPath == "" ? "sidebar__active" : ""
+                          }`}
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                            fill="currentColor"
+                            className={`w-2 h-2 ${
+                              getPath == "product-list" ? "text-white" : ""
+                            }`}
+                          >
+                            <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+                          </svg>
+                          Products List
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/dashboard/crm"
+                          className={`text-[15px] ${
+                            getPath == "add-product" ? "sidebar__active" : ""
+                          }`}
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                            fill="currentColor"
+                            className={`w-2 h-2 ${
+                              getPath == "add-product" ? "text-white" : ""
+                            }`}
+                          >
+                            <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+                          </svg>
+                          Add Product
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/dashboard/crm"
+                          className={`text-[15px] ${
+                            getPath == "category-list" ? "sidebar__active" : ""
+                          }`}
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                            fill="currentColor"
+                            className={`w-2 h-2 ${
+                              getPath == "crm" ? "text-white" : ""
+                            }`}
+                          >
+                            <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+                          </svg>
+                          Category List
+                        </Link>
+                      </li>
+                    </ul>
+                  </details>
                 </li>
               </ul>
             </details>
