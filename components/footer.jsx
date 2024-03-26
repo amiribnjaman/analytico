@@ -6,7 +6,7 @@ export default function footer() {
     <footer className="footer items-center p-5 pt-10">
       <aside className="items-center grid-flow-col ">
         <p className="text-[16px] font-[400]">
-          Copyright © 2023 - All right reserved
+          Copyright © 2024 - All right reserved
         </p>
       </aside>
 
