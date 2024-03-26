@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function footer() {
@@ -10,10 +11,10 @@ export default function footer() {
       </aside>
 
       <nav className="grid-flow-col gap-4 text-[14px] md:place-self-center md:justify-self-end font-semibold">
-        <a>About</a>
-        <a>FAQ's</a>
-        <a>Support</a>
-        <a>Contact</a>
+        <Link href='/'>About</Link>
+        <Link href='/'>FAQ's</Link>
+        <Link href='/'>Support</Link>
+        <Link href='/'>Contact</Link>
       </nav>
     </footer>
   );
